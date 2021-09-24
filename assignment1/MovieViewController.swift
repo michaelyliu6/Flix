@@ -18,7 +18,6 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         
-//        let cell = UITableViewCell()
         
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
@@ -61,6 +60,7 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     
                 self.movies = dataDictionary["results"] as! [[String: Any]]
+                print(self.movies)
                 self.tableView.reloadData()
                 // TODO: Get the array of movies
                 // TODO: Store the movies in a property to use elsewhere
@@ -73,14 +73,24 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        // Find the selected move
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+    
 
 }
