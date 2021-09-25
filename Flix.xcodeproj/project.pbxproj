@@ -89,9 +89,9 @@
 		5B7F771C26E1FBFF0095E997 = {
 			isa = PBXGroup;
 			children = (
-				5B7F772726E1FBFF0095E997 /* assignment1 */,
-				5B7F773E26E1FC030095E997 /* assignment1Tests */,
-				5B7F774926E1FC030095E997 /* assignment1UITests */,
+				5B7F772726E1FBFF0095E997 /* Flix */,
+				5B7F773E26E1FC030095E997 /* FlixTests */,
+				5B7F774926E1FC030095E997 /* FlixUITests */,
 				5B7F772626E1FBFF0095E997 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B7F772726E1FBFF0095E997 /* assignment1 */ = {
+		5B7F772726E1FBFF0095E997 /* Flix */ = {
 			isa = PBXGroup;
 			children = (
 				5B7F772826E1FBFF0095E997 /* AppDelegate.swift */,
@@ -121,25 +121,25 @@
 				5B37249726FAFB1F00689023 /* MovieGridViewController.swift */,
 				5B37249926FBE9F000689023 /* MovieGridCell.swift */,
 			);
-			path = assignment1;
+			path = Flix;
 			sourceTree = "<group>";
 		};
-		5B7F773E26E1FC030095E997 /* assignment1Tests */ = {
+		5B7F773E26E1FC030095E997 /* FlixTests */ = {
 			isa = PBXGroup;
 			children = (
 				5B7F773F26E1FC030095E997 /* assignment1Tests.swift */,
 				5B7F774126E1FC030095E997 /* Info.plist */,
 			);
-			path = assignment1Tests;
+			path = FlixTests;
 			sourceTree = "<group>";
 		};
-		5B7F774926E1FC030095E997 /* assignment1UITests */ = {
+		5B7F774926E1FC030095E997 /* FlixUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5B7F774A26E1FC030095E997 /* assignment1UITests.swift */,
 				5B7F774C26E1FC030095E997 /* Info.plist */,
 			);
-			path = assignment1UITests;
+			path = FlixUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
